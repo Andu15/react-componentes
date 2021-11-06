@@ -4,11 +4,11 @@ import { Card, Button, Col, Row, Badge } from 'react-bootstrap';
 
 const ShoppingCart = ({quantityProducts, containerProducts, Total, TotalPoints}) => {
   return (
-    <section>
+    <>
       <Card className="text-center">
         <Card.Header>
           <Badge bg="secondary">
-            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-shopping-cart iconShopping"></i>
           </Badge>
         </Card.Header>
         <Card.Body>
@@ -32,12 +32,30 @@ const ShoppingCart = ({quantityProducts, containerProducts, Total, TotalPoints})
           </Row>
         </Card.Body>
         <Card.Footer className="text-muted">
-          <Card.Text>Total: {Total}</Card.Text>
-          <Card.Text>Total de Puntos: {TotalPoints}</Card.Text>
-          <Button variant="primary">COMPRAR</Button>
+          <Row>
+            <Col xs={6}>
+              <Card.Text>Total:</Card.Text>
+            </Col>
+            <Col xs={6}>
+              <Card.Text>{Total}</Card.Text>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={6}>
+              <Card.Text >Total de Puntos:</Card.Text>
+            </Col>
+            <Col xs={6}>
+              <Card.Text>{TotalPoints}</Card.Text>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <Button variant="primary">COMPRAR</Button>
+            </Col>
+          </Row>
         </Card.Footer>
       </Card>
-    </section>
+    </>
   )
 }
 
