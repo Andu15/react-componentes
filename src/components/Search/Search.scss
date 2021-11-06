@@ -1,0 +1,25 @@
+.inputGroup{
+  // background-color: aqua;
+  width: 100%;
+
+  .labelSearch {
+    background-color: #eee;
+    padding: 0.5em;
+    border-radius: 32px;
+    margin: 0;
+  }
+
+  .inputSearch{
+    width:50%;
+    margin:1px;
+    padding:10px 16px;
+    border-radius:32px;
+    outline:none;
+    border:2px solid #ccd1d1;
+    transition:all 0.5s;
+    &:focus{
+      background:#fff;
+      width:100%;
+    }
+  }
+}
